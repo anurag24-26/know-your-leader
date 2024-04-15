@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader Database</title>
+<style>
+ h2 {
+    text-align: center;
+  }
+  body {
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling for container */
+    max-height: 80vh; /* Set maximum height of container */
+  }
+  .leader {
+    border: 2px solid #000000;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #0d575c;
+    height: 400px; /* Fixed height for leader cards */
+    overflow-y: auto; /* Enable scrolling for leader cards if content exceeds height */
+  }
+  .leader p{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .leader img {
+    max-width: 100%;
+    max-height: 200px; /* Increased image height */
+    margin-bottom: 10px;
+    border-radius: 20px; /* Rounded image */
+    border: 3px solid #000000; /* Added border around the image */
+  }
+  .leadersinfo{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(27, 155, 155);
+  }
+  
+</style>
+</head>
+<body>
+
+
+<h2>Know Your नेता</h2>
+
+<input type="text" id="searchInput" onkeyup="searchLeaders()" placeholder="Search for names..">
+
+<div class="container" id="leaderContainer">
+  <div class="leader">
+    <img src="narendra_modi.jpg" alt="Narendra Modi">
+    <p> <span class="leadersinfo">Name-</span> Narendra Modi</p>
+    <p><span class="leadersinfo">Party-</span>BJP</p>
+    <p><span class="leadersinfo">District-</span>Varanasi</p>
+  </div>
+  <div class="leader">
+    <img src="rajnath_singh.jpg" alt="Rajnath Singh">
+    <p> <span class="leadersinfo">Name-</span> Rajnath Singh</p>
+    <p><span class="leadersinfo">Party-</span>BJP</p>
+    <p><span class="leadersinfo">District-</span>Lucknow</p>
+  </div>
+  <div class="leader">
+    <img src="smritiirani.jpg" alt="Smriti Irani">
+    <p>Smriti Irani</p>
+    <p>BJP</p>
+    <p>Amethi</p>
+  </div>
+  <div class="leader">
+    <img src="riteshpandey.jpg" alt="Ritesh Pandey">
+    <p>Ritesh Pandey</p>
+    <p>BJP</p>
+    <p>Ambedkar Nagar</p>
+  </div>
+  <div class="leader">
+    <img src="heamamalini.jpg" alt="Hema malini">
+    <p>Hema Malini</p>
+    <p>BJP</p>
+    <p>Mathura</p>
+  </div>
+</div>
+
+<script>
+function searchLeaders() {
+  var input, filter, leaders, i, leader, name, state, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  leaders = document.getElementById("leaderContainer").getElementsByClassName("leader");
+  for (i = 0; i < leaders.length; i++) {
+    leader = leaders[i];
+    name = leader.getElementsByTagName("p")[0];
+    state = leader.getElementsByTagName("p")[2]; // Assuming state is the third <p> tag
+    txtValue = name.textContent || name.innerText;
+    stateValue = state.textContent || state.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1 || stateValue.toUpperCase().indexOf(filter) > -1) {
+      leader.style.display = "";
+    } else {
+      leader.style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
