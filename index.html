@@ -3,48 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>know your leader</title>
+<title>Leader Database</title>
 <style>
  h2 {
     text-align: center;
-  }
-  body {
+}
+
+body {
+    background-color: burlywood;
     overflow-y: scroll; /* Enable vertical scrolling */
-  }
-  .container {
+}
+
+.container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
     padding: 20px;
-    overflow-y: auto; /* Enable scrolling for container */
     max-height: 80vh; /* Set maximum height of container */
-  }
-  .leader {
+}
+
+.leader {
     border: 2px solid #000000;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
     background-color: #0d575c;
     height: 400px; /* Fixed height for leader cards */
-    overflow-y: auto; /* Enable scrolling for leader cards if content exceeds height */
-  }
-  .leader p{
+}
+
+.leader p {
     font-size: 20px;
     font-weight: 600;
-color:wheat;
-  }
-  .leader img {
+    color: wheat;
+    margin-bottom: 5px; /* Add margin-bottom to decrease space between paragraphs */
+}
+
+.leader img {
     max-width: 100%;
     max-height: 200px; /* Increased image height */
     margin-bottom: 10px;
     border-radius: 20px; /* Rounded image */
     border: 3px solid #000000; /* Added border around the image */
-  }
-  .leadersinfo{
+}
+
+.leadersinfo {
     font-size: 22px;
     font-weight: 600;
     color: aqua;
-  }
+}
+
+.searchinput {
+    width: 300px; /* Increase width */
+    height: 40px; /* Increase height */
+    border-radius: 20px; /* Apply border radius for curved edges */
+    border: 2px solid #000000; /* Add border */
+    padding: 10px; /* Add padding */
+    box-sizing: border-box; /* Include padding and border in the width */
+    display: flex; /* Change display to flex */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0 auto; /* Add margin to center horizontally */
+}
+/* Add this CSS to make leader images rectangular */
+.leader-img {
+  width: 100%; /* Set width to 100% */
+  height: 40%; /* Automatically adjust height */
+}
+
+
   
 </style>
 </head>
@@ -53,39 +79,248 @@ color:wheat;
 
 <h2>Know Your नेता</h2>
 
-<input type="text" id="searchInput" onkeyup="searchLeaders()" placeholder="Search for names..">
+<input type="text" class="searchinput" id="searchInput" onkeyup="searchLeaders()" placeholder="Search for names..">
 
 <div class="container" id="leaderContainer">
   <div class="leader">
-    <img src="narendra_modi.jpg" alt="Narendra Modi">
+    <img class="leader-img" src="narendra_modi.jpg" alt="Narendra Modi">
     <p> <span class="leadersinfo">Name-</span> Narendra Modi</p>
-    <p><span class="leadersinfo">Party-</span>BJP</p>
-    <p><span class="leadersinfo">Parliamentary Seat-</span>Varanasi</p>
+    
+    <p><span class="leadersinfo">District-</span>Varanasi</p>
+<img src="bjp.png" alt="" height="60" width="60">
   </div>
   <div class="leader">
-    <img src="rajnath_singh.jpg" alt="Rajnath Singh">
+    <img class="leader-img"  src="rajnath_singh.jpg" alt="Rajnath Singh">
     <p> <span class="leadersinfo">Name-</span> Rajnath Singh</p>
-    <p><span class="leadersinfo">Party-</span>BJP</p>
-    <p><span class="leadersinfo">Parliamentary Seat-</span>Lucknow</p>
+    
+    <p><span class="leadersinfo">Parlimentary Seat-</span>Lucknow</p>
+<img src="bjp.png" alt="" height="60" width="60">
   </div>
   <div class="leader">
-    <img src="smritiirani.jpg" alt="Smriti Irani">
-    <p>Smriti Irani</p>
-    <p>BJP</p>
-    <p>Amethi</p>
+    <img class="leader-img"  src="smritiirani.jpg" alt="Smriti Irani">
+    <p><span class="leadersinfo">Name-</span>Smriti Irani</p>
+    
+    <p><span class="leadersinfo">Parlimentary Seat-</span>Amethi</p>
+<img src="bjp.png" alt="" height="60" width="60">
   </div>
   <div class="leader">
-    <img src="riteshpandey.jpg" alt="Ritesh Pandey">
-    <p>Ritesh Pandey</p>
-    <p>BJP</p>
-    <p>Ambedkar Nagar</p>
+    <img class="leader-img"  src="riteshpandey.jpg" alt="Ritesh Pandey">
+    <p><span class="leadersinfo">Name-</span>Ritesh Pandey</p>
+    
+    <p><span class="leadersinfo">Parlimentary Seat-</span>Ambedkar Nagar</p>
+<img src="bjp.png" alt="" height="60" width="60">
   </div>
+
   <div class="leader">
-    <img src="heamamalini.jpg" alt="Hema malini">
-    <p>Hema Malini</p>
-    <p>BJP</p>
-    <p>Mathura</p>
+    <img class="leader-img"  src="heamamalini.jpg" alt="Hema malini">
+    <p><span class="leadersinfo">Name-</span>Hema Malini</p>
+    <p><span class="leadersinfo">Parlimentary Seat-</span>Mathura</p>
+<img src="bjp.png" alt="" height="60" width="60">
   </div>
+
+  <div class="leader">
+    <img class="leader-img"  src="ravi_kishan.jpg" alt="Ravi Kishan">
+    <p><span class="leadersinfo">Name-</span> Ravi Kishan</p>
+    <p><span class="leadersinfo">Parliamentary Seat-</span> Gorakhpur</p>
+<img src="bjp.png" alt="" height="60" width="60">
+  </div>
+
+<div class="leader">
+    <img class="leader-img" src="pradeep_kumar.png" alt="Pradeep Kumar">
+    <p><span class="leadersinfo">Name-</span> Pradeep Kumar</p>
+    <p><span class="leadersinfo">Parliamentary Seat-</span> Kairana</p>
+<img src="bjp.png" alt="" height="60" width="60">
+  </div>
+
+<div class="leader">
+    <img class="leader-img" src="sanjeev_kumar.jpg" alt="Sanjeev Kumar Balyan">
+    <p><span class="leadersinfo">Name-</span> Sanjeev Kumar Balyan</p>
+    <p><span class="leadersinfo">Parliamentary Seat-</span> Muzaffarnagar</p>
+<img src="bjp.png" alt="" height="60" width="60">
+  </div>
+
+<div class="leader">
+  <img class="leader-img"  src="om_kumar.avif" alt="Om Kumar">
+  <p><span class="leadersinfo">Name-</span> Om Kumar</p>
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Nagina (SC)</p>
+  <img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="ghanshyam_lodhi.webp" alt="Ghanshyam Lodhi">
+  <p><span class="leadersinfo">Name-</span> Ghanshyam Lodhi</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Rampur</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="Parameshvar_Lal_Saini.avif" alt="Parameshvar Lal Saini">
+  <p><span class="leadersinfo">Name-</span> Parameshvar Lal Saini</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Sambhal</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+<div class="leader">
+  <img class="leader-img"  src="sangam_lal.jpg" alt="Sangam Lal Gupta">
+  <p><span class="leadersinfo">Name-</span> Sangam Lal Gupta</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Pratapgarh</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="MUKESH_RAJPUT.webp" alt="Mukesh Rajput">
+  <p><span class="leadersinfo">Name-</span> Mukesh Rajput</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Farrukhabad</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="RAM_sjankar.jpg" alt="Ram Shankar Katheria">
+  <p><span class="leadersinfo">Name-</span> Ram Shankar Katheria</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Etawah (SC)</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="subrat_pathak.jpg" alt="Subrat Pathak">
+  <p><span class="leadersinfo">Name-</span> Subrat Pathak</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Kannauj</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="devendra_singh.jpg" alt="Devendra Singh Bhole">
+  <p><span class="leadersinfo">Name-</span> Devendra Singh Bhole</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Akbarpur</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+<div class="leader">
+  <img class="leader-img"  src="upendra_singh.jpg" alt="Upendra Singh Rawat">
+  <p><span class="leadersinfo">Name-</span> Upendra Singh Rawat</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Barabanki (SC)</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="lallu_singh.jpg" alt="Lallu Singh">
+  <p><span class="leadersinfo">Name-</span> Lallu Singh</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Faizabad</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="SAKET_MISHRA.jpg" alt="Saket Mishra">
+  <p><span class="leadersinfo">Name-</span> Saket Mishra</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Shrawasti</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="kirti_vardhan.jpg" alt="Kirti Vardhan Singh">
+  <p><span class="leadersinfo">Name-</span> Kirti Vardhan Singh</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Gonda</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="jagdambika_pal.jpg" alt="Jagdambika Pal">
+  <p><span class="leadersinfo">Name-</span> Jagdambika Pal</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Domariyaganj</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+<div class="leader">
+  <img class="leader-img"  src="harish_dwivedi.jpg" alt="Harish Dwivedi">
+  <p><span class="leadersinfo">Name-</span> Harish Dwivedi</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Basti</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="praveen_kumar_nishad.jpg" alt="Praveen Kumar Nishad">
+  <p><span class="leadersinfo">Name-</span> Praveen Kumar Nishad</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Sant Kabir Nagar</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="pankaj_choudhary.jpg" alt="Pankaj Choudhary">
+  <p><span class="leadersinfo">Name-</span> Pankaj Choudhary</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Maharajganj</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="vijay_kumar_dubey.jpg" alt="Vijay Kumar Dubey">
+  <p><span class="leadersinfo">Name-</span> Vijay Kumar Dubey</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Kushi Nagar</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="kamlesh_paswan.avif" alt="Kamlesh Paswan">
+  <p><span class="leadersinfo">Name-</span> Kamlesh Paswan</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Bansgaon (SC)</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+<div class="leader">
+  <img class="leader-img"  src="neelam_sonkar.jpg" alt="Neelam Sonkar">
+  <p><span class="leadersinfo">Name-</span> Neelam Sonkar</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Lalganj (SC)</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="dinesh_lal_yadav_nirahua.jpg" alt="Dinesh Lal Yadav 'Nirahua'">
+  <p><span class="leadersinfo">Name-</span> Dinesh Lal Yadav 'Nirahua'</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Azamgarh</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="ravindra_kushwaha.jpg" alt="Ravindra Kushwaha">
+  <p><span class="leadersinfo">Name-</span> Ravindra Kushwaha</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Salempur</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="kripashankar_singh.jpg" alt="Kripashankar Singh">
+  <p><span class="leadersinfo">Name-</span> Kripashankar Singh</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Jaunpur</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+<div class="leader">
+  <img class="leader-img"  src="mahendra_nath_pandey.webp" alt="Mahendra Nath Pandey">
+  <p><span class="leadersinfo">Name-</span> Mahendra Nath Pandey</p>
+  
+  <p><span class="leadersinfo">Parliamentary Seat-</span> Chandauli</p
+    ><img src="bjp.png" alt="" height="60" width="60">
+</div>
+
+
+
+
 </div>
 
 <script>
